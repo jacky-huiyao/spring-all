@@ -1,0 +1,3 @@
+rootProject.name = 'spring-all'
+include 'spring-mybatis-simple'
+

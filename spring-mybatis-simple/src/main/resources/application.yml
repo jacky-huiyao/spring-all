@@ -1,0 +1,23 @@
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:test
+    driver-class-name: org.h2.Driver
+    username: root
+    password: 123456
+    schema: classpath:db/ddl.sql
+    data: classpath:db/dml.sql
+  h2:
+    console:
+      enabled: true
+  liquibase:
+    enabled: false
+
+mybatis:
+  mapper-locations: mapper/*.xml
+  type-aliases-package: com.hy.mybatis.domain
+
+
+logging:
+  level:
+  - debug
