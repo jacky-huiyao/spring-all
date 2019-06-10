@@ -91,6 +91,7 @@
 1. start Application类
 2. 访问 http://localhost:8080/user/list
 
-
+    ```
     [{"id":1,"name":"张三","birthDate":[2019,6,10],"salary":10000.00,"status":"NORMAL","lastLoginTime":[1970,1,1,17,52,57]}]
+    ```
 
