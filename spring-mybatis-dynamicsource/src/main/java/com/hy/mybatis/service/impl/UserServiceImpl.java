@@ -25,7 +25,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @DataSource("slave")
     public List<User> findAll() {
         return userQueryDao.findAll();
     }

@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
-
+@DataSource("slave")
 public interface UserQueryDao {
 
     @Results(id = "userMap",value = {
@@ -22,5 +22,6 @@ public interface UserQueryDao {
 
     @ResultMap(value = "userMap")
     @Select("select * from user")
+    @DataSource("slave")
     List<User> findAll();
 }
