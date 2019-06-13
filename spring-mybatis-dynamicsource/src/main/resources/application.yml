@@ -1,0 +1,27 @@
+
+spring:
+  h2:
+    console:
+      enabled: true
+  liquibase:
+    enabled: false
+
+mybatis:
+  mapper-locations: mapper/master/*.xml,mapper/slave/*.xml
+  type-aliases-package: com.hy.mybatis.domain
+  mysql:
+    master:
+      jdbcUrl:  jdbc:mysql://localhost:3306/master?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+    slave:
+      jdbcUrl: jdbc:mysql://localhost:3306/slave?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+
+logging:
+  level:
+    root : error
+    com.hy : debug
