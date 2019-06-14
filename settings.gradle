@@ -3,4 +3,5 @@ rootProject.name = 'spring-all'
 include 'spring-mybatis-simple'
 include 'spring-mybatis-multisource'
 include 'spring-mybatis-dynamicsource'
+include 'spring-thymeleaf'
 

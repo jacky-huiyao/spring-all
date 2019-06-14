@@ -79,6 +79,8 @@ subprojects {
             dependency group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.1.5.RELEASE'
             dependency group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.5.RELEASE'
             dependency group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.5.RELEASE'
+            dependency group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.4'
+
 
             //db
             dependency group: 'org.liquibase', name: 'liquibase-core', version: '3.6.3'
@@ -101,11 +103,15 @@ subprojects {
             dependency group: 'com.h2database', name: 'h2', version: '1.4.199'
             dependency group: 'junit', name: 'junit', version: '4.12'
 
+            //templates
+            dependency group: 'org.thymeleaf', name: 'thymeleaf', version: '3.0.11.RELEASE'
+
+
         }
     }
 
     dependencies {
-        // spring
+        //spring
         compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
 
         //db
@@ -116,7 +122,6 @@ subprojects {
         //log
         compile group: 'ch.qos.logback', name: 'logback-core'
 
-
         //util
         compile group: 'org.modelmapper', name: 'modelmapper'
 
@@ -126,6 +131,7 @@ subprojects {
         compile group: 'io.springfox', name: 'springfox-bean-validators'
 
 
+        //--------------------------------------test library------------------------------------------------//
         testCompile group: 'junit', name: 'junit'
         testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
         testCompile 'org.springframework.restdocs:spring-restdocs-mockmvc'

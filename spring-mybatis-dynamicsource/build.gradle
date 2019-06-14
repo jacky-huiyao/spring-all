@@ -1,7 +1,7 @@
 dependencies {
     compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter'
     compile group: 'com.h2database', name: 'h2'
-    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.4'
+    compile group: 'org.aspectj', name: 'aspectjweaver'
 
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
