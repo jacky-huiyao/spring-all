@@ -15,11 +15,11 @@ public interface UserQueryDao {
         @Result(column = "birth_date",property = "birthDate",javaType = java.time.LocalDate.class),
         @Result(column = "last_login_time",property = "lastLoginTime",javaType = java.time.LocalDateTime.class)
     })
-    @Select("select * from user  where id = #{id}")
+    @Select("select * from templates.article  where id = #{id}")
     User findById(Integer id);
 
 
     @ResultMap(value = "userMap")
-    @Select("select * from user")
+    @Select("select * from templates.article")
     List<User> findAll();
 }

@@ -10,7 +10,7 @@ import java.util.List;
 //@Mapper
 public interface UserDao {
 
-    @Insert("insert into user(name,birth_date,salary,status,last_login_time)  " +
+    @Insert("insert into templates.article(name,birth_date,salary,status,last_login_time)  " +
             "values(#{name},#{birthDate},#{salary},#{status},#{lastLoginTime})")
     void save(User user);
 

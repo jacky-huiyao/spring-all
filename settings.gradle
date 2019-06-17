@@ -4,4 +4,5 @@ include 'spring-mybatis-simple'
 include 'spring-mybatis-multisource'
 include 'spring-mybatis-dynamicsource'
 include 'spring-thymeleaf'
+include 'spring-mustache'
 
