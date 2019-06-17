@@ -4,7 +4,6 @@ import com.hy.mustache.domain.Article;
 import org.fluttercode.datafactory.impl.DataFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -25,6 +24,18 @@ public class ArticleController {
         model.put("articles", articles);
 
         return new ModelAndView("article/index", model);
+    }
+
+    @GetMapping("/article2")
+    public String displayArticle2(Map<String, Object> model) {
+
+        List<Article> articles = IntStream.range(0, 10)
+                .mapToObj(i -> generateArticle("Article Title " + i))
+                .collect(Collectors.toList());
+
+        model.put("articles", articles);
+
+        return "article/index";
     }
 
     private Article generateArticle(String title) {
